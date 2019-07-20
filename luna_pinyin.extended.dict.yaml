@@ -1,0 +1,92 @@
+# Rime dictionary
+# encoding: utf-8
+#
+# Ziyunch 的 Rime 词库
+#
+# Thanks to the following works:
+#
+#「Rime词库扩展计划」——为小狼毫打造一个强大好用的词库（OpenCC重制版） by @imy0823
+#  2014-09-07
+#
+#  BetterRime词库增强包－实用版の准正式版 by @imy0823
+#  2016-10-29
+#
+#  搜狗细胞词库
+#  2014-11-02
+#
+#  带拼音版
+#  2018-10-29
+# Luna Pinyin Extended Dictionary(Basic)  - 明月拼音擴充詞庫（基本）
+#   瑾昀 <cokunhui@gmail.com>
+#   https://github.com/rime-aca/dictionaries
+#   2014-09-07
+#
+# * 拼音加加論壇beckyer製作的繁體詞庫
+#   http://bbs.jjol.cn/showthread.php?t=6758
+#
+# * 小麥注音輸入法詞庫
+#   https://github.com/mjhsieh/McBopomofo/tree/master/Source/Data
+#
+# * 新酷音共享詞庫
+#   Google搜尋獲得，由臺灣网友整理
+#
+# * 詞庫网
+#   http://baseterm.com/
+#
+# * 敎育部詞頻統計表
+#   http://www.edu.tw/files/site_content/m0001/pin/biau2.htm?open
+#
+# * 維基百科
+#   http://www.wikipedia.org/
+#
+# 部署位置：
+# ~/.config/ibus/rime  (Linux)
+# ~/Library/Rime  (Mac OS)
+# %APPDATA%\Rime  (Windows)
+#
+# 於重新部署後生效
+#
+
+---
+name: terra_pinyin.extended
+version: "2019.07.19"
+sort: by_weight
+use_preset_vocabulary: true
+# 双拼不支持 luna_pinyin.cn_en 词库，已禁用。
+import_tables:
+  - luna_pinyin                # 明月拼音自带词库
+#  - dict/luna_pinyin.cn_en          # 中英混合词条 150 by 瑾昀
+  - dict/luna_pinyin.hanyu          # 汉语大词典 22w by 瑾昀
+  - dict/luna_pinyin.poetry         # 诗词，源于唐宋诗词、千家诗、花间集、楚辞、诗经 2.6w by 瑾昀
+  - dict/luna_pinyin.anime          # 动漫词条 3w by imy0823
+  - dict/luna_pinyin.chat           # 聊天词条 3.5k by imy0823
+  - dict/luna_pinyin.classical      # 成语词条 2.8w by imy0823
+  - dict/luna_pinyin.computer       # 电脑词条 1w by imy0823
+  - dict/luna_pinyin.daily          # 日常词条 31w by imy0823
+  - dict/luna_pinyin.diet           # 饮食词条 15w by imy0823
+  - dict/luna_pinyin.game           # 游戏词条 6.9k by imy0823
+  - dict/luna_pinyin.history        # 历史词条 10w by imy0823
+  - dict/luna_pinyin.idiom          # 俗语词条 6.6w by imy0823
+  - dict/luna_pinyin.movie          # 电影词条，片名、演员、导演 1.3w by imy0823
+  - dict/luna_pinyin.music          # 音乐词条，歌曲、制作人、歌星 2w by imy0823
+  - dict/luna_pinyin.name           # 名人词条 1w by imy0823
+  - dict/luna_pinyin.net            # 网络词条 3.6w by imy0823
+  - dict/luna_pinyin.website        # 网站词条 5k by imy0823
+  - dict/luna_pinyin.place          # 地点词条 3k by imy0823 2016
+  - dict/luna_pinyin.sgmain         # 搜狗核心词条 120w by imy0823 2016
+  - dict/luna_pinyin.sgplus         # 搜狗扩展词条1 by imy0823
+  - dict/luna_pinyin.sgplus2        # 搜狗扩展词条2 by imy0823
+  - dict/luna_pinyin.shopping       # 购物词条 5.4w by imy0823 2016
+  - dict/luna_pinyin.kaomoji        # by ziyunch
+  - dict/c_botany                  # 植物学词汇 2.7w from 搜狗细胞词库
+  - dict/c_chemistry               # 化学化工词汇 1.3w from 搜狗细胞词库
+  - dict/c_finance                 # 金融词汇 1.2w from 搜狗细胞词库
+  - dict/c_geology                 # 地理地质词汇 3k from 搜狗细胞词库
+  - dict/c_medicine                # 中西医词汇 6.3w from 搜狗细胞词库
+  - dict/c_nalanxingde_all         # 纳兰性德185首 1.6k from 搜狗细胞词库
+  - dict/c_shijing_all             # 诗经全文 6k from 搜狗细胞词库
+  - dict/c_stock                   # 股票基金词汇
+  - dict/c_popular                 # 网络流行新词
+  - dict/c_ship                    # 船舶港口词汇
+  - dict/c_place                   # 全国地名大全
+  - dict/c_catering                # 餐饮词汇

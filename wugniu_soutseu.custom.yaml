@@ -1,0 +1,8 @@
+# 将原有全拼反查替换为按'`'键双拼反查并显示声调
+patch:
+  "schema/name": "吴语（苏州）"
+  luna_pinyin/dictionary: terra_pinyin.extended
+  luna_pinyin/prism: terra_double_pinyin_mspy
+  luna_pinyin/tips: 〔双拼〕
+  luna_pinyin/preedit_format: []
+  reverse_lookup/comment_format: default
