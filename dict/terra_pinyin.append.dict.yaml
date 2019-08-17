@@ -1,0 +1,10 @@
+name: terra_pinyin.append
+version: "2019.07.29"
+sort: by_weight
+use_preset_vocabulary: true
+max_phrase_length: 1
+min_phrase_weight: 100
+...
+
+呱	gu1	40%
+呱	gua1	60%

@@ -55,6 +55,7 @@ use_preset_vocabulary: true
 # 禁用含拼音的词库
 import_tables:
   - terra_pinyin               # 地球拼音自带词库
+  - dict/terra_pinyin.append   # Ziyunch
 #  - dict/luna_pinyin.cn_en          # 中英混合词条 150 by 瑾昀
   - dict/luna_pinyin.hanyu          # 汉语大词典 22w by 瑾昀
   - dict/luna_pinyin.poetry         # 诗词，源于唐宋诗词、千家诗、花间集、楚辞、诗经 2.6w by 瑾昀

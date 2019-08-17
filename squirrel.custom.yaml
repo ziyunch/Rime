@@ -1,40 +1,66 @@
 patch:
-#  us_keyboard_layout: true                 # 键盘选项：应用美式键盘布局
+#  us_keyboard_layout: true                   # 键盘选项：应用美式键盘布局
 # 状态通知，适当，也可设为全开（always）全关（never）
 #  show_notifications_when: appropriate
 #
-  style/color_scheme: clean_white                 # 选择配色方案
-  style/horizontal: true                   # 候选窗横向显示
-  style/inline_preedit: false              # 关闭内嵌编码，这样就可以显示首行的拼音
-  style/corner_radius: 10                  # 窗口圆角半径
-  style/border_height: 0                   # 窗口边界高度，大于圆角半径才有效果
-  style/border_width: 0                    # 窗口边界宽度，大于圆角半径才有效果
-  style/line_spacing: 1                    # 候选词的行间距
-  style/spacing: 5                         # 在非内嵌编码模式下，预编辑和候选词之间的间距
-  style/font_face: "HiraginoSansGB-W3,HanaMinB"   # 字体名称
-  style/font_point: 21                     # 字号
+  style/color_scheme: clean_white             # 选择配色方案
+  style/inline_preedit: false
+  style/spacing: 6
+
+  preset_color_schemes/ziyunch:
+      author: "ziyunch, based on Ethan Schoonover's Solarized color scheme"
+      name: "梓韵 / ziyunch"
+      # 以下为自定义样式
+      border_height: 6                        # 候选条边框高度，大于圆角半径才生效
+      border_weight: 6                        # 候选条边框宽度，大于圆角半径才生效
+      candidate_format: "%c %@"               # 编号 %c 和候选词 %@ 前后的空间
+      corner_radius: 6                        # 候选条圆角
+      font_face: "HiraginoSansGB-W3,HanaMinB" # 候选词字体
+      font_point: 16                          # 候选词大小
+      hilited_corner_radius: 6　              # 高亮项圆角
+      horizontal: true                        # 候选条水平排列
+      inline_preedit: false                   # 双行显示， true 单行显示
+      label_font_point: 12                    # 编号大小
+      spacing: 6                              # 拼音行与候选条间距 (需要开启内嵌编码)
+      # 以下为自定义配色方案
+      back_color: 0x362b00                    # 候选条背景色，base03，24位色值，16进制，BGR顺序
+      border_color: 0x362b00                  # 候选条边框色，base03
+      candidate_text_color: 0xa1a193          # 候选词文字颜色，base1
+      comment_text_color: 0x969483            # 提示文字颜色，base0
+      hilited_back_color: 0x362b00            # 拼音行背景色，base03 (需要开启内嵌编码)
+      hilited_candidate_back_color: 0x362b00  # 高亮项背景色，base03
+      hilited_candidate_label_color: 0x0089b5 # 高亮项编号颜色，yellow
+      hilited_candidate_text_color: 0x0089b5  # 高亮项文字颜色，yellow
+      hilited_comment_text_color: 0x0089b5    # 高亮项提示文字颜色，yellow
+      hilited_text_color: 0x98a12a            # 拼音行文字颜色，cyan (需要开启内嵌编码)
+      label_color: 0xa1a193                   # 编号颜色，base1
+      text_color: 0x756e58                    # 拼音行光标颜色，base01
 
 # 注：预设的配色方案及代码（指定为 style/color_scheme ）
-#   碧水 - aqua
-#   青天 - azure
-#   明月 - luna
-#   墨池 - ink
-#   孤寺 - lost_temple
-#   暗堂 - dark_temple
-#   星际我争霸 - starcraft
-#   谷歌 - google
-#   晒经石 - solarized_rock
-#   简约白 - clean_white
+#   冷漠／apathy
+#   碧水／aqua
+#   青天／azure
+#   简约白／clean_white
+#   暗堂／dark_temple
+#   浮尘／dust
+#   谷歌／google
+#   墨池／ink
+#   孤寺／lost_temple
+#   明月／luna
+#   沙漠夜／mojave_dark
+#   幽能／psionics
+#   純粹的本質／purity_of_essence
+#   純粹的形式／purity_of_form
+#   曬經石／solarized_rock
+#   星際我爭霸／starcraft
+#   梓韵 / ziyunch
 
-# 自定義 Mac 應用程序的初始轉換狀態，首先查看應用的 Info.plist 文件得到 該應用的 Bundle Identifier，通常是形如 com.apple.Xcode 的字符串
+# 自定义 Mac 应用程序的初始转换状态，首先查看应用的 Info.plist 文件得到该应用的 Bundle Identifier，通常乃形如 com.apple.Xcode 的字符串
+# 默认 ascii_mode 的应用: Spotlight, Alfred, Quicksilver, Terminal, iterm2, MacVim, Xcode, textwrangler, TextMate, atom, VSCode, sublimetext, Aquamacs, Emacs, hyper
 
 app_options/com.apple.TextEdit:
     ascii_mode: true
 app_options/com.apple.finder:
-    ascii_mode: true
-app_options/com.apple.Xcode:
-    ascii_mode: true
-app_options/org.gnu.Emacs:
     ascii_mode: true
 app_options/com.filemaker.client.advanced12:
     ascii_mode: true
@@ -46,6 +72,4 @@ app_options/com.jetbrains.pycharm:
     ascii_mode: true
 app_options/org.rstudio.Rstudio:
     ascii_mode: true
-app_options/com.github.atom:
-    ascii_mode: true
-app_options/com.tencent.xinWeChat: {}
+app_options/com.tencent.xinWeChat: {} # 微信默认中文
