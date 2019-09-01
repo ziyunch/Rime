@@ -1,14 +1,13 @@
 patch:
   translator/dictionary: luna_pinyin.extended
   schema/name: "微软双拼"
-  simplifier/option_name: zh_simp
 
   punctuator/import_preset: symbols
   recognizer/patterns/punct: "^[/0-9]*[a-z]*$"
   recognizer/patterns/number: "^[-+]?[0-9][.:0-9]*[%]?$"
 
-  'engine/filters/@before 0':
-    simplifier@emoji_suggestion
+  "engine/filters/@before 0": simplifier@emoji_suggestion
+
   emoji_suggestion:
     opencc_config: emoji.json
     option_name: emoji_suggestion
@@ -19,7 +18,7 @@ patch:
       states: ["中文", "西文"]
     - name: full_shape
       states: ["半角", "全角"]
-    - name: zh_simp
+    - name: simplification
       reset: 1
       states: ["漢字", "汉字"]
     - name: ascii_punct

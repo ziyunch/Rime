@@ -5,7 +5,7 @@ patch:
     - schema: luna_pinyin          # 朙月拼音
     - schema: terra_pinyin         # 地球拼音 dì qiú pīn yīn
     - schema: terra_double_pinyin_mspy # 地球双拼
-#    - schema: double_pinyin_mspy   # 微软双拼
+    - schema: double_pinyin_mspy   # 微软双拼
 #    - schema: double_pinyin        # 自然码双拼
 #    - schema: double_pinyin_abc    # 智能ABC双拼
 #    - schema: double_pinyin_flypy  # 小鹤双拼
@@ -14,6 +14,10 @@ patch:
 #    - schema: cangjie              # 仓颉输入法
 #    - schema: bopomofo             # 注音
 #    - schema: emoji                # 颜文字
+
+  "key_binder/bindings":
+    - { when: paging, accept: bracketleft, send: Page_Up }
+    - { when: has_menu, accept: bracketright, send: Page_Down }
 
   ascii_composer:
     good_old_caps_lock: false

@@ -4,8 +4,6 @@ patch:
 #  show_notifications_when: appropriate
 #
   style/color_scheme: clean_white             # 选择配色方案
-  style/inline_preedit: false
-  style/spacing: 6
 
   preset_color_schemes/ziyunch:
       author: "ziyunch, based on Ethan Schoonover's Solarized color scheme"
@@ -21,18 +19,18 @@ patch:
       horizontal: true                        # 候选条水平排列
       inline_preedit: false                   # 双行显示， true 单行显示
       label_font_point: 12                    # 编号大小
-      spacing: 6                              # 拼音行与候选条间距 (需要开启内嵌编码)
+      spacing: 6                              # 拼音行与候选条间距 (需要关闭inline_preedit)
       # 以下为自定义配色方案
       back_color: 0x362b00                    # 候选条背景色，base03，24位色值，16进制，BGR顺序
       border_color: 0x362b00                  # 候选条边框色，base03
       candidate_text_color: 0xa1a193          # 候选词文字颜色，base1
       comment_text_color: 0x969483            # 提示文字颜色，base0
-      hilited_back_color: 0x362b00            # 拼音行背景色，base03 (需要开启内嵌编码)
+      hilited_back_color: 0x362b00            # 拼音行背景色，base03 (需要关闭inline_preedit)
       hilited_candidate_back_color: 0x362b00  # 高亮项背景色，base03
       hilited_candidate_label_color: 0x0089b5 # 高亮项编号颜色，yellow
       hilited_candidate_text_color: 0x0089b5  # 高亮项文字颜色，yellow
       hilited_comment_text_color: 0x0089b5    # 高亮项提示文字颜色，yellow
-      hilited_text_color: 0x98a12a            # 拼音行文字颜色，cyan (需要开启内嵌编码)
+      hilited_text_color: 0x98a12a            # 拼音行文字颜色，cyan (需要关闭inline_preedit)
       label_color: 0xa1a193                   # 编号颜色，base1
       text_color: 0x756e58                    # 拼音行光标颜色，base01
 

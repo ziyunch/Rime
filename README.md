@@ -53,11 +53,12 @@ bash rime-install :preset double-pinyin emoji NGLI/rime-wugniu_soutseu
 To install, clone this repo to `~/Library/Rime`:
 
 ```sh
-cd ..
+cd ~/Library/Rime
 git init
 echo -e "/*\n\!/README.md\n\!/dict\n\!/*.custom.yaml\n\!/*.extended.dict.yaml\n\!/terra_double_pinyin_mspy.*" >> .gitignore
 git remote add origin https://github.com/ziyunch/Rime.git
 git pull origin master
+ln -s /Library/Input\ Methods/Squirrel.app/Contents/SharedSupport/opencc/* ./opencc/
 ```
 
 ## Deploy
