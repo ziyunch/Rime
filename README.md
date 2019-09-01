@@ -55,7 +55,7 @@ To install, clone this repo to `~/Library/Rime`:
 ```sh
 cd ~/Library/Rime
 git init
-echo -e "/*\n\!/README.md\n\!/dict\n\!/*.custom.yaml\n\!/*.extended.dict.yaml\n\!/terra_double_pinyin_mspy.*" >> .gitignore
+echo -e "/*\n\!/README.md\n\!/dict\n\!/*.custom.yaml\n\!/*.extended.dict.yaml\n\!/terra_double_pinyin_mspy.*\n\!*pyim*" >> .gitignore
 git remote add origin https://github.com/ziyunch/Rime.git
 git pull origin master
 ln -s /Library/Input\ Methods/Squirrel.app/Contents/SharedSupport/opencc/* ./opencc/
