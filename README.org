@@ -1,0 +1,121 @@
+* 中州韻輸入法引擎配置 - A personalized Rime config
+This configuration:
+
+- Optimized for simplified Chinese;
+- Implement 朙月拼音 =luna-pinyin=, 微软双拼 =double-pinyin-mspy= and
+  地球拼音 =terra-pinyin= with 20+ dictionaries including symbols and
+  emoji;
+- Feature 地球双拼 =terra-double-pinyin-mspy=, a double pinyin input
+  method supporting tone marks;
+- Use 地球双拼 =terra-double-pinyin-mspy= to reverse lookup
+  吴语（苏州话） =wugniu_soutseu= with tone marks, toggled by =`=;
+- Use ASCII mode for several applications.
+
+** Supported Rime Version
+*** MacOS
+The config should run on Squarrel 0.14.0 or greater.
+
+** Installation
+*** [[https://rime.im][鼠鬚管]] Squirrel (MacOS)
+- via [[https://rime.im][Latest release]]
+- via [[https://github.com/rime/squirrel][source code]]: [[https://github.com/rime/squirrel/blob/master/INSTALL.md][Build instruction]]
+- via [[https://brew.sh][Homebrew]]: =brew cask install squirrel=
+
+*** [[https://github.com/rime/plum][東風破]] /plum/
+Install /plum/, the configuration manager for Rime input method engine:
+
+#+BEGIN_SRC shell
+cd ~/Library/Rime
+curl -fsSL https://git.io/rime-install | bash
+#+END_SRC
+
+Then install packages:
+
+#+BEGIN_SRC shell
+cd plum
+bash rime-install :preset double-pinyin emoji NGLI/rime-wugniu_soutseu
+#+END_SRC
+
+/Supported input methods ℞/
+
+- *Essentials:* [[https://github.com/rime/rime-prelude][prelude]] 基础配置 / [[https://github.com/rime/rime-essay][essay]] 八股文
+- *Phonetic-based:* [[https://github.com/rime/rime-luna-pinyin][luna-pinyin]] 朙月拼音 / [[https://github.com/rime/rime-terra-pinyin][terra-pinyin]] 地球拼音 / [[https://github.com/rime/rime-bopomofo][bopomofo]] 注音 / [[https://github.com/rime/rime-pinyin-simp][pinyin-simp]] 袖珍简化字拼音
+- *Derivatives of Pinyin:* [[https://github.com/rime/rime-double-pinyin][double-pinyin]] 双拼 / [[https://github.com/rime/rime-combo-pinyin][combo-pinyin]] 宫保拼音 / [[https://github.com/rime/rime-stenotype][stenotype]] 打字速记法
+- *Varieties of Chinese:* [[https://github.com/rime/rime-jyutping][jyutping]] 粤拼 / [[https://github.com/rime/rime-wugniu][wugniu]] 上海吴语 / [[https://github.com/rime/rime-soutzoe][soutzoe]] 苏州吴语
+  / [[https://github.com/rime/rime-middle-chinese][middle-chinese]] 中古汉语拼音
+- *Shape-based:* [[https://github.com/rime/rime-stroke][stroke]] 笔画 / [[https://github.com/rime/rime-cangjie][cangjie]] 仓颉输入法 / [[https://github.com/rime/rime-quick][quick]] 速成 / [[https://github.com/rime/rime-wubi][wubi]] 五笔字型 / [[https://github.com/rime/rime-array][array]] 行列输入法 / [[https://github.com/rime/rime-scj][scj]] 快速仓颉
+- *Miscellaneous:* [[https://github.com/rime/rime-emoji][emoji]] 颜文字 / [[https://github.com/rime/rime-ipa][ipa]]: 国际音标
+
+*** Personalized configuration and dictionaries
+To install, clone this repo to =~/Library/Rime=:
+
+#+BEGIN_SRC shell
+cd ~/Library/Rime
+git init
+echo -e "/*\n\!/README.org\n\!/dict\n\!/*.custom.yaml\n\!/*.extended.dict.yaml\n\!/terra_double_pinyin_mspy.*\n!/*pyim*" >> .gitignore
+git remote add origin https://github.com/ziyunch/Rime.git
+git pull origin master
+#+END_SRC
+
+Update: 2019-08-31
+#+BEGIN_SRC shell
+ln -s /Library/Input\ Methods/Squirrel.app/Contents/SharedSupport/opencc/* ./opencc/
+#+END_SRC
+
+** Deploy
+Press @@html:<kbd>@@Control + Option + `@@html:</kbd>@@ to deploy current configuration.
+
+Press <kbd> Control + `</kbd> to select input method.
+
+** Updates
+To update /plum/ itself, run:
+
+#+BEGIN_SRC shell
+cd ~/Library/Rime/plum
+bash rime-install plum
+#+END_SRC
+
+To update the /plum/ packages, run:
+
+#+BEGIN_SRC shell
+cd ~/Library/Rime/plum
+bash rime-install :preset double-pinyin emoji NGLI/rime-wugniu_soutseu
+#+END_SRC
+
+To update the config, run:
+
+#+BEGIN_SRC shell
+cd ~/Library/Rime
+git pull origin master
+#+END_SRC
+
+** Customerization
+
+- Modify =default.custom.yaml= to select more input methods or comment
+  out input methods no longer needed:
+
+#+BEGIN_SRC yaml
+schema_list:
+  - schema: luna_pinyin          # 朙月拼音
+  - schema: terra_pinyin         # 地球拼音 dì qiú pīn yīn
+  - schema: terra_double_pinyin_mspy # 地球双拼
+  - schema: double_pinyin_mspy   # 微软双拼
+  - schema: double_pinyin        # 自然码双拼
+  - schema: double_pinyin_abc    # 智能ABC双拼
+  - schema: double_pinyin_flypy  # 小鹤双拼
+  - schema: wugniu_soutseu       # 吴语（苏州话）
+  - schema: stroke               # 笔画
+  - schema: cangjie              # 仓颉输入法
+  - schema: bopomofo             # 注音
+  - schema: emoji                # 颜文字
+#+END_SRC
+
+- Delete =wugniu_soutseu.custom.yaml= to use the default 朙月拼音
+  =luna_pinyin= reverse lookup 吴语（苏州话） =wugniu_soutseu=.
+
+** More guides:
+
+- [[Official Customization Guide][https://github.com/rime/home/wiki/CustomizationGuide]]
+- [[Schema.yaml Customization Guide by LEOYoon-Tsaw][https://github.com/LEOYoon-Tsaw/Rime_collections/blob/master/Rime_description.md]]
+
+
