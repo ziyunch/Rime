@@ -65,7 +65,7 @@ ln -s /Library/Input\ Methods/Squirrel.app/Contents/SharedSupport/opencc/* ./ope
 ** Deploy
 Press @@html:<kbd>@@Control + Option + `@@html:</kbd>@@ to deploy current configuration.
 
-Press <kbd> Control + `</kbd> to select input method.
+Press @@html:<kbd>@@ Control + `@@html:</kbd>@@ to select input method.
 
 ** Updates
 To update /plum/ itself, run:
