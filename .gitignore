@@ -1,0 +1,8 @@
+/*
+!/.gitignore
+!/README.org
+!/dict
+!/*.custom.yaml
+!/*.extended.dict.yaml
+!/terra_double_pinyin_mspy.*
+pyim*

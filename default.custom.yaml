@@ -2,9 +2,9 @@ patch:
   "menu/page_size": 9
 
   schema_list:
+    - schema: terra_double_pinyin_mspy # 地球双拼
     - schema: luna_pinyin          # 朙月拼音
     - schema: terra_pinyin         # 地球拼音 dì qiú pīn yīn
-    - schema: terra_double_pinyin_mspy # 地球双拼
     - schema: double_pinyin_mspy   # 微软双拼
 #    - schema: double_pinyin        # 自然码双拼
 #    - schema: double_pinyin_abc    # 智能ABC双拼

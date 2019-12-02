@@ -16,6 +16,22 @@ This configuration:
 The config should run on Squarrel 0.14.0 or greater.
 
 ** Installation
+*** Easy Installation
+Git clone this repo:
+#+BEGIN_SRC sh
+git clone git@github.com:ziyunch/Rime.git ~/Library/Rime
+#+END_SRC
+
+Open ~README.org~ and `C-c C-c` on next line, wait until ~RESULTS~ pop up:
+#+BEGIN_SRC sh
+brew cask install squirrel
+cd ~/Library/Rime
+curl -fsSL https://git.io/rime-install | bash
+ln -s /Library/Input\ Methods/Squirrel.app/Contents/SharedSupport/opencc/* ./opencc/
+cd plum
+bash rime-install :preset double-pinyin emoji NGLI/rime-wugniu_soutseu
+#+END_SRC
+
 *** [[https://rime.im][鼠鬚管]] Squirrel (MacOS)
 - via [[https://rime.im][Latest release]]
 - via [[https://github.com/rime/squirrel][source code]]: [[https://github.com/rime/squirrel/blob/master/INSTALL.md][Build instruction]]
@@ -96,9 +112,9 @@ git pull origin master
 
 #+BEGIN_SRC yaml
 schema_list:
+  - schema: terra_double_pinyin_mspy # 地球双拼
   - schema: luna_pinyin          # 朙月拼音
   - schema: terra_pinyin         # 地球拼音 dì qiú pīn yīn
-  - schema: terra_double_pinyin_mspy # 地球双拼
   - schema: double_pinyin_mspy   # 微软双拼
   - schema: double_pinyin        # 自然码双拼
   - schema: double_pinyin_abc    # 智能ABC双拼

@@ -60,14 +60,20 @@ app_options/com.apple.TextEdit:
     ascii_mode: true
 app_options/com.apple.finder:
     ascii_mode: true
-app_options/com.filemaker.client.advanced12:
-    ascii_mode: true
-app_options/com.mathworks.matlab:
-    ascii_mode: true
 app_options/com.microsoft.Excel:
     ascii_mode: true
 app_options/com.jetbrains.pycharm:
     ascii_mode: true
+app_options/com.jetbrains.intellij:
+    ascii_mode: true
+app_options/org.pgadmin.pgAdmin4:
+    ascii_mode: true
+app_options/com.mathworks.matlab:
+    ascii_mode: true
 app_options/org.rstudio.Rstudio:
+    ascii_mode: true
+app_options/com.filemaker.client.advanced12:
+    ascii_mode: true
+app_options/com.tinyspeck.slackmacapp:
     ascii_mode: true
 app_options/com.tencent.xinWeChat: {} # 微信默认中文
